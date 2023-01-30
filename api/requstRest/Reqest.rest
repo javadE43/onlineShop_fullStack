@@ -1,0 +1,181 @@
+GET http://localhost:4000/api/product
+
+
+
+###
+POST http://localhost:4000/api/v1/product
+content-Type:application/json
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImphdmFkRTQzIiwiYWRtaW4iOnRydWUsImlhdCI6MTY2MjExMjY3MiwiZXhwIjoxNjYyMTk5MDcyfQ.CNEks3oMMvngRTKGBik1ZHHZtmCi8YU6QJwNz6Tv23A
+
+{
+    "title":"mekup3",
+    "slug":"one",
+    "type":14,
+    "price":267344.4,
+    "discount":7887.3,
+    "quantity":21,
+    "image":"http://localhost:4000/1662111382300.jpg",
+    "shop":false,
+    "createdAt":null,
+    "updatedAt":null,
+    "content":null,
+    "category":"golren2"
+}
+
+###
+PUT  http://localhost:4000/api/product/2
+content-Type:application/json
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImphdmFkRTQzIiwiYWRtaW4iOnRydWUsImlhdCI6MTY2MTI0NTA2MSwiZXhwIjoxNjYxMjQ4NjYxfQ.MxwoAqMOeUyqcvlaLQCUuY0u_1gvP3lA3RphavDlK3Y
+
+{
+    "slug":"three",
+    "type":14,
+    "price":77.4,
+    "discount":7887.3,
+    "quantity":21,
+    "shop":false,
+    "createdAt":null,
+    "updatedAt":null,
+    "content":null,
+    "category":"golren2"
+}
+
+
+###
+GET  http://localhost:4000/api/v1/product
+content-Type:application/json
+
+###
+GET  http://localhost:4000/api/v1/product/1
+content-Type:application/json
+
+
+###
+DELETE   http://localhost:4000/api/product/2
+content-Type:application/json
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImphdmFkRTQzIiwiYWRtaW4iOnRydWUsImlhdCI6MTY2MTI2NDA1NCwiZXhwIjoxNjYxMjY3NjU0fQ.gdG1f24od4guCSS5BZDt9brJbst_ZG7yK0DQmW-ktBs
+
+
+###
+GET   http://localhost:4000/api/v1/product/category/golren2
+content-Type:application/json
+
+###
+GET   http://localhost:4000/api/product/category/golren2/1
+content-Type:application/json
+
+###
+GET   http://localhost:4000/api/v1/category
+content-Type:application/json
+
+###
+POST http://localhost:4000/api/v1/cart
+content-Type:application/json
+
+{
+"cart":{  "firstname":"23456",
+  "lastname": "ahmad2i",
+  "email": "javadahmadi2345h43336@gmail.com"},
+  "products":[
+        {"title":"javad1"},
+        {"title":"javad2"},
+        {"title":"javad3"},
+        {"title":"javad4"}
+  ]
+}
+
+###
+GET http://localhost:4000/api/cart
+content-Type:application/json
+tokenCart:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdG5hbWUiOiIyMzQ1NiIsImxhc3RuYW1lIjoiYWhtYWQyaSIsImVtYWlsIjoiamF2YWRhaG1hZGkyMzQ1aDQzMzM2QGdtYWlsLmNvbSIsImlhdCI6MTY2MTUzNjg1NywiZXhwIjoxNjYyMTQxNjU3fQ.pBlSnCHEW0-tw5lLjdkbnGkImfRstmUSn-tAIRz7vXs
+
+
+###
+PUT http://localhost:4000/api/cart
+content-Type:application/json
+tokenCart:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdG5hbWUiOiIyMzQ1NiIsImxhc3RuYW1lIjoiYWhtYWQyaSIsImVtYWlsIjoiamF2YWRhaG1hZGkyMzQ1aDQzMzM2QGdtYWlsLmNvbSIsImlhdCI6MTY2MTUxNDk4MCwiZXhwIjoxNjYyMTE5NzgwfQ.HYnKdUDe4dTtz01c5uFWsDQhB5tZowOSV6jfkJufBiw
+
+{
+  "itemCart":[{
+    "title": "javad",
+    "quantity": 21,
+    "price": 21.4,
+    "createdat": "2022-08-26T08:52:02.000Z",
+    "slug": "one"
+  },
+  {
+       "title": "javad2",
+    "quantity": 21,
+    "price": 21.4,
+    "createdat": "2022-08-26T08:52:02.000Z",
+    "slug": "one"
+  },
+  {
+       "title": "javad3",
+    "quantity": 21,
+    "price": 21.4,
+    "createdat": "2022-08-26T08:52:02.000Z",
+    "slug": "one"
+  },{
+       "title": "javad4",
+    "quantity": 21,
+    "price": 21.4,
+    "createdat": "2022-08-26T08:52:02.000Z",
+    "slug": "one"
+  }
+  ]
+}
+
+
+###
+POST http://localhost:4000/api/v1/auth/regeister
+content-Type:application/json
+
+{
+  "firstname":"javad23",
+  "username": "javadE43",
+  "lastname": "ahmad2i",
+  "mobile": "093673943532",
+  "email": "javadahmadi2@gmail.com",
+ "passwordHash": "4353423",
+ "admin":true
+}
+
+
+
+###
+POST http://localhost:4000/api/v1/auth/login
+content-Type:application/json
+
+{
+  "username": "javadE43",
+ "passwordHash": "4353423"
+}
+
+###
+POST http://localhost:4000/api/auth/refreshtoken
+content-Type:application/json
+
+{
+  "refreshtoken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjYxNTAzODQ1fQ.DFbu1693BEER0OyuWy7Um7N846yJ0-BB7bSchH-_XRo"
+
+}
+
+
+# authorization
+
+
+###
+PUT  http://localhost:4000/api/users/1
+content-Type:application/json
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImphdmFkRTQzMiIsImFkbWluIjp0cnVlLCJpYXQiOjE2NjEwOTc5NDksImV4cCI6MTY2MTEwMTU0OX0.g7bWbV7MdmNPydOKwVZwp7GIMMSRs_fHifaf_7kENto
+
+{
+  "firstname":"javad",
+  "username": "javadE434564562",
+  "lastname": "ahmad2i",
+  "mobile": "093673943532",
+  "email": "javadahmadi2@gmail.com",
+ "passwordHash": "4353423",
+ "admin": true
+}

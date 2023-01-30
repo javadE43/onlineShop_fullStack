@@ -1,0 +1,76 @@
+.carouselMainCard.swiper {
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease;
+  }
+  
+  .carouselMainCard .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+  
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Swiper Button Style */
+  .carouselMainCard .swiper-button-next,
+  .carouselMainCard .swiper-button-prev {
+  
+    top:50%;
+    z-index: 999;
+    width: 40px;
+    height: 40px;
+    margin: auto;
+    line-height: 40px;
+    position: absolute;
+    /* visibility: hidden; */
+    text-align: center;
+    transform: translateY(-50%);
+    color: rgb(33, 33, 33);
+    transition: all 0.4s ease 0s;
+    border-radius: 50%;
+    color:#fff;
+    background-color: #0f3460;
+  }
+  .carouselMainCard .swiper-button-prev {
+    right: initial;
+    left:0;
+    bottom: initial;
+    top:50%;
+  
+  }
+  
+  
+    .carouselMainCard .swiper-button-next {
+      right: 0;
+      bottom: initial;
+      top:50%;
+  
+    }
+  
+  
+  
+  .carouselMainCard .swiper-button-next {
+    /* transform: translateX(70px); */
+  }
+  .carouselMainCard .swiper-button-prev:after,
+  .carouselMainCard .swiper-button-next:after {
+    font-size: x-large;
+  }
+  .carouselMainCard .swiper-button-next:hover,
+  .carouselMainCard .swiper-button-prev:hover {
+    color: rgb(255, 255, 255);
+    background-color: #0f3460;
+  }
+  .carouselMainCard .swiper-button-next.swiper-button-disabled,
+  .carouselMainCard .swiper-button-prev.swiper-button-disabled {
+    opacity: 0.1;
+  }
+  .carouselMainCard.swiper:hover .swiper-button-prev,
+  .carouselMainCard.swiper:hover .swiper-button-next {
+    visibility: visible;
+    /* transform: translateX(0px) !important ; */
+  }
